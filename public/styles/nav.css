@@ -1,0 +1,49 @@
+#nav-bar {
+  position:fixed;
+  width: 100%;
+  height:80px;
+  background:#00a087;
+  color :#e8fdff;
+  padding: 0 2em;
+}
+
+#nav-bar .logo {
+  width: 80px;
+  height:80px;
+  float:left;
+}
+
+#nav-bar .header{
+ padding-left:10px;
+ font-size: 200%;
+ float:left;
+ line-height: 80px;
+}
+
+.button {
+  float:right;
+   padding: 10.5px 21px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   color: black;
+   font-size: 16px;
+   text-decoration: none;
+   vertical-align: middle;
+   background:#e7fdff;
+   font-size:180%;
+   border:1px solid black;
+   margin-top:10px;
+   cursor: pointer;
+   box-shadow:  0.25em color darkgreen;
+}
+
+.button:hover{
+  color: #3a7999;
+  box-shadow: inset 0 0 0 3px #3a7999;
+  transform: translateX(10px);
+  background-color: #fff;
+  transition: background 0s;
+}
+
+

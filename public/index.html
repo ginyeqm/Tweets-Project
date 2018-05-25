@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <link rel="stylesheet" href ="/styles/nav.css">
+
+    <link rel="stylesheet" href ="/styles/new-tweet.css"
+
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <script src="/tweets"></script>
+    <script>
+
+
+    // $(function(){
+    //   var $button =
+    // })
+
+    </script>
+  </head>
+
+  <body>
+
+    <!-- Top nav bar (fixed) -->
+    <nav id="nav-bar">
+      <img class="logo" src="/images/bird.png">
+      <span class="header">Tweeter</span>
+      <span class="button" type = "button">compose<span>
+    </nav>
+
+    <!-- Page-specific (main) content here -->
+
+  <main class="container">
+    <section class="new-tweet">
+      <h2 class= "compose">Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+        </form>
+      <span class="counter">140</span>
+    </section>
+    <section class="tweets"></section>
+  </main>
+
+
+  </body>
+</html>

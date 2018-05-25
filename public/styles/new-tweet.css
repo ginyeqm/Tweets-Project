@@ -1,0 +1,32 @@
+textarea{
+  width:100%;
+  line-height: 25px;
+  padding:3px 4px;
+
+}
+
+h2{
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  margin-top: 1px;
+
+}
+
+.container {
+  padding-top:140px;
+  padding-left:2em;
+  padding-right:2em;
+  padding-bottom:120px;
+
+}
+
+.counter{
+  float:right;
+}
+
+.new-tweet {
+  padding:15px;
+  background:#eeeeee;
+  border:1px solid #e2e2e2;
+  border-radius: 6px;
+}
