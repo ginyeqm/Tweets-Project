@@ -30,22 +30,26 @@ $(document).ready(function(){
     var article = $("<article></article>").addClass("border");
 
     //Div1 creation
-    var div1 = $("<div>").addClass("firstDiv");
-    var img = $("<img>").addClass("firstPicture").attr("src", tweetData.user.avatars.small);
-    var h1 = $("<h1></h1>").addClass("firstTitle").text(tweetData.user.name);
-    var h3 = $("<h3></h3>").addClass("right").text(tweetData.user.handle);
-    var divComplete = div1.append(img, h1, h3);
+    var ComposeTweet = $("<div>").addClass("firstDiv");
+    var picture = $("<img>").addClass("firstPicture").attr("src", tweetData.user.avatars.small);
+    var title = $("<h1></h1>").addClass("firstTitle").text(tweetData.user.name);
+    var userAt = $("<h3></h3>").addClass("right").text(tweetData.user.handle);
+    var PTU = ComposeTweet.append(picture, title, userAt);
     //add the image, h1 and h3 elements in the div 1
     //append the elements here.
     //Div2 Creation
+    var textArea = $("<div></div>").addClass("firstTextArea").text(tweetData.content.text)
 
-    var div2 = $("<div></div>").addClass("firstTextArea").text(tweetData.content.text)
+    var icon = $('<img src="/images/iconlike.png">').addClass("icon")
+    var icon2 = $('<img src="/images/retweet.png">').addClass("icon")
+    var icon3 = $('<img src="/images/icon.png">').addClass("icon")
 
     var footer = $("<footer></footer>").addClass("bottomText").text(tweetData.created_at)
-    var complteArticle = article.append(divComplete, div2 ,footer);
+
+    var iconFooter = footer.append(icon , icon2, icon3);
+    var complteArticle = article.append(PTU, textArea , iconFooter);
       return complteArticle;
   };
-
 
 
     // Test / driver code (temporary)
@@ -67,7 +71,7 @@ $(document).ready(function(){
           $.ajax({url: "/tweets" , method: "GET"}).done(function(data){
             var $tweet = createTweetElement(data[data.length - 1])
             $('.tweets').prepend($tweet);
-
+            $(".counter").append();
             $('textarea[name="text"]').val('')
             $(".counter").text("140")
 
@@ -77,7 +81,4 @@ $(document).ready(function(){
   });
   loadTweets();
 });
-
-
-
 
